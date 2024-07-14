@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <link rel="stylesheet" href="Chat.css">
+</head>
+<body>
+  <div class="chat-box" id="chat-box">
+    <!-- Messages will be dynamically added here -->
+  </div>
+  <div class="chat-container">
+    <form id="message-form" class="message-form">
+      <input type="text" id="message-input" class="message-input" placeholder="Type your message...">
+      <button type="submit" class="send-button">Send</button>
+      <button type="button" class="emoji-button" onclick="toggleEmojiPicker()">😀</button>
+      <div id="emoji-picker" class="emoji-picker">
+        <button type="button" onclick="addEmoji('😂')">😂</button>
+        <button type="button" onclick="addEmoji('😭')">😭</button>
+        <button type="button" onclick="addEmoji('😍')">😍</button>
+        <button type="button" onclick="addEmoji('😊')">😊</button>
+        <button type="button" onclick="addEmoji('😢')">😢</button>
+        <button type="button" onclick="addEmoji('😋')">😋</button>
+        <button type="button" onclick="addEmoji('🍕')">🍕</button>
+      </div>
+      <button type="button" class="poll-button" onclick="redirectToPolls()">Create Poll</button>
+    </form>
+  </div>
+
+  <script src="Chat.js"></script>
+</body>
+</html>
