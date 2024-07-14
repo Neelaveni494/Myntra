@@ -1,0 +1,101 @@
+/* Reset default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header styling */
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-image: url("https://img.pikbest.com/wp/202346/gift-box-bag-autumn-themed-3d-rendering-with-shopping-and-on-a-light-yellow-background-ideal-for-website-templates-social-media-fashion-advertising_9630275.jpg!bw700");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  color: white;
+  font-style: italic;
+  font-size: 80px;
+  position: relative; /* Make header position relative */
+}
+
+/* Define the keyframes for typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Apply the animation to h1 element */
+.App-title {
+  font-size: 70px;
+  overflow: hidden; /* Ensures text doesn't overflow */
+  white-space: nowrap; /* Ensures text stays in one line */
+  animation: typing 6s steps(50, end) infinite; /* Adjust duration and steps as needed */
+  margin-left: 20px;
+}
+
+/* Button styling */
+#invite-button, #accept-link-button, #add-to-cart-button {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+  margin-bottom:250px;
+}
+
+#invite-button:hover, #accept-link-button:hover, #add-to-cart-button:hover {
+  background-color: #005f77;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Fix position of buttons */
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+}
+
+/* Shopping list container */
+.shopping-list-container {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.shopping-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+
+.item {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.item .image {
+  max-width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.item .price {
+  color: #008cba;
+  font-weight: bold;
+}
