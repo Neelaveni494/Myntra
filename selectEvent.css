@@ -1,0 +1,95 @@
+body{
+   
+    display: grid;
+    place-items: top;
+  height:100vh;
+overflow:hidden;
+ 
+}
+.bottom {
+  background-image: url("https://cdn.glitch.global/c3b743f6-6d3a-4614-a390-8fbb432a58ab/87ee9bdc-0623-4d5e-b30f-eb2f06addfcd.image.png?v=1720885713870");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom; /* Position at the bottom center */
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-end; /* Align items to the bottom */
+  padding: 60px;
+  margin-right:1100px;
+  flex-wrap:wrap;
+  overflow:hidden;
+  
+  position:relative;
+  bottom:120px;
+  left:100px;
+}
+
+.event-item{
+    height: 150px;
+    width: 200px;
+    display: grid;
+    place-items: top;
+    padding: 10px;
+    perspective: 100px;
+  
+}
+
+img{
+    height: 200px;
+    width:200px;
+    transition: transform 1s;
+  border-radius:10px;
+      
+}
+.container{
+    display: grid;
+    place-items: top;
+
+    position: relative;
+
+  
+    height: 100px;  
+    width: 100%;
+  gap:20px;
+}
+.event-list{
+    display: flex;
+    width:calc(200px * 12);
+    animation: play 15s linear infinite;
+}
+
+@keyframes play{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(calc(-250px * 9));
+    }
+}
+
+.container::before,
+.container::after{
+    content: '';
+    height: 100%;
+    width: 15%;
+    z-index: 2;
+    position: absolute;
+
+    }
+
+    .container::before{
+        left:0;
+        top:0;
+    }
+
+    .container::after{
+        right:0;
+        top:0;
+    }
+
+    img:hover{
+        transform: translateZ(20px);
+    }
