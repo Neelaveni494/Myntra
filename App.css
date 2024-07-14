@@ -1,0 +1,66 @@
+/* Reset default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-image: url("https://wearepentagon.com/wp-content/uploads/2021/04/myntra_Image_logo.png");
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.App-header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: left;
+}
+
+.App-nav {
+  display: flex;
+  gap: 10px; /* Spacing between buttons */
+  position: absolute;
+  top: 20px; /* Adjust top position */
+  right: 20px; /* Adjust right position */
+  flex-wrap: wrap;
+}
+
+button {
+  color: black;
+  background-color: white;
+  font-size: 16px;
+  padding: 5px 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: lightgrey;
+}
+
+/* Animation for h1 */
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: white;
+  font-style: italic;
+  font-size: 30px;
+  animation: slideInDown 1s ease-in-out forwards;
+}
